@@ -1,0 +1,31 @@
+package controller;
+
+import java.net.HttpURLConnection;
+import java.net.URL;
+
+public class SendRequestClass {
+	
+	private static HttpURLConnection connection;
+	
+	public static void main(String[] args) {
+		
+	}
+	
+	//Using Java 8
+	void sendRequest() 
+	{
+		URL url = null;
+		try {
+			
+			 url = new URL("https://jsonplaceholder.typicode.com/albums");
+				
+			
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		finally {
+			url = null;
+		}
+	}
+}

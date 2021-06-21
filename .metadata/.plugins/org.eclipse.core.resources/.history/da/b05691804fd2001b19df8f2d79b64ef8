@@ -1,0 +1,9 @@
+package controller;
+
+public class SendRequestClass {
+	
+	public static void main(String[] args) {
+		
+	}
+
+}

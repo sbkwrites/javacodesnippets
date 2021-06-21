@@ -1,0 +1,56 @@
+package controller;
+
+import java.io.BufferedReader;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+
+public class SendRequestClass {
+	
+	private static HttpURLConnection connection;
+	
+	public static void main(String[] args) {
+		
+	}
+	
+	//Using Java 8
+	void sendRequest() 
+	{
+		URL url = null;
+		BufferedReader br ;
+		String line;
+		StringBuffer sb = new StringBuffer();
+		
+		try {
+			
+			 url = new URL("https://jsonplaceholder.typicode.com/albums");
+			 connection = (HttpURLConnection) url.openConnection();
+			
+			 //Request setup
+			 connection.setRequestMethod("GET");
+			 connection.setConnectTimeout(5000);
+			 connection.setReadTimeout(5000);
+			 
+			 
+			 //Response Code check
+			 
+			 int status = connection.getResponseCode();
+			 
+			 if(status>299) {
+				 
+			 }else {
+				 
+			 }
+			 
+			
+		}catch (MalformedURLException e) {
+			// TODO: handle exception
+		 
+		}catch (Exception e) {
+			// TODO: handle exception
+		}
+		finally {
+			url = null;
+		}
+	}
+}
